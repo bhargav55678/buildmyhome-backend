@@ -63,12 +63,11 @@ const loginUser = async (req, res) => {
             });
         }
 
-       const token = jwt.sign(
+  const token = jwt.sign(
   { id: user._id },
-  process.env.JWT_SECRET,
+  "myverystrongsecretkey123",
   { expiresIn: "1d" }
 );
-
         res.status(200).json({
             message: "Login Successful",
             token,
