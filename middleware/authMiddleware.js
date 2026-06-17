@@ -26,7 +26,7 @@ const token = authHeader.startsWith("Bearer ")
 
         const decoded = jwt.verify(
   token,
-  process.env.JWT_SECRET
+  "myverystrongsecretkey123"
 );
 
         console.log("DECODED:", decoded);
