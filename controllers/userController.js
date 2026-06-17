@@ -62,12 +62,12 @@ const loginUser = async (req, res) => {
                 message: "Invalid Email or Password"
             });
         }
-
-  const token = jwt.sign(
+const token = jwt.sign(
   { id: user._id },
-  "myverystrongsecretkey123",
+  process.env.JWT_SECRET,
   { expiresIn: "1d" }
 );
+
         res.status(200).json({
             message: "Login Successful",
             token,
