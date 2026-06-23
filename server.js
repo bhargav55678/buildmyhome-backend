@@ -46,6 +46,8 @@ app.use("/api/reviews", reviewRoutes);
 app.use("/api/materials", materialRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/images", imageRoutes);
-app.listen(5000, () => {
-    console.log("SERVER STARTED");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`SERVER STARTED ON PORT ${PORT}`);
 });
