@@ -22,7 +22,16 @@ const cors = require("cors");
 const imageRoutes = require("./routes/imageRoutes");
 
 connectDB();
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://buildmyhome-frontend.onrender.com",
+      "http://localhost:5173",
+    ],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 
