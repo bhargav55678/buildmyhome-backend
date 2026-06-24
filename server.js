@@ -36,7 +36,7 @@ app.use(express.json());
 
 
 app.get("/", (req, res) => {
-    res.send("BuildMyHome Backend Running");
+    res.send("NEW BACKEND DEPLOYED 2026");
 });
 
 app.use("/api/users", userRoutes);
